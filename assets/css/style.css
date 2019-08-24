@@ -1,0 +1,552 @@
+*{
+    padding: 0px;
+    border: none;
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+body,html{
+    overflow-x: hidden !important;
+    overflow-y: auto;
+    padding-bottom: 5vw;
+    font-family: 'Ubuntu', sans-serif !important;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    height: auto;
+    padding: 1vw;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 6000;
+    color: #fff;
+}
+
+header h1{
+    font-size: 1.7vw;
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+    z-index: 10000;
+}
+::-webkit-scrollbar:hover{
+   -webkit-transition: 0.7s ease-in;
+    -moz-transition: 0.7s ease-in;
+    -o-transition: 0.7s ease-in;
+   background-color: rgba(0, 0, 0, 0.5);
+   z-index: 10000;	
+}
+::-webkit-scrollbar-thumb {
+   height: 6px;
+   border: 4px solid rgba(0, 0, 0, 0);
+   background-clip: padding-box;
+   -webkit-border-radius: 7px;
+   background-color: rgba(178, 178, 178, 0.7);
+   z-index: 10000;
+}
+::-webkit-scrollbar-button{
+   width: 0;
+   height: 0;
+   display: none;
+   z-index: 10000;
+}
+::-webkit-scrollbar-corner {
+   background-color: transparent;
+}
+
+html{
+   background-color:#312d28;
+}
+body{
+   width:100%;
+   height:100%;
+   position:absolute;
+   background-color:#312d28;	
+   font-family:'Ebrima';
+   
+   -webkit-touch-callout: none; /* iOS Safari */
+     -webkit-user-select: none; /* Chrome/Safari/Opera */
+      -khtml-user-select: none; /* Konqueror */
+        -moz-user-select: none; /* Firefox */
+         -ms-user-select: none; /* Internet Explorer/Edge */
+             user-select: none;
+   -webkit-font-smoothing: antialiased !important;
+   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+   /*aplica configurações para sobrepor a barra de rolagem em navegador webkit*/
+   @media(-webkit-min-device-pixel-ratio:0){
+       body, .topo_menu, .content-login, .cad_top, .cad_content, .lembrar_senha_top, .lembrar_senha_content, .box-profile{
+           padding-right:14px;	
+       }
+   }
+@media (min-width: 500px) {
+ html {
+   font-size: 0.60em;
+ }
+}
+@media (min-width: 800px) {
+ html {
+   font-size: 0.80em;
+ }
+}
+@media (min-width: 1000px) {
+ html {
+   font-size: 1em;
+ }
+}
+@media (min-width: 1200px) {
+ html {
+   font-size: 1.20em;
+ }
+}
+@media (min-width: 1680px) {
+ html {
+   font-size: 1.40em;
+ }
+}
+
+.destaque{
+    width: 105%;
+    height: calc(31vw + 250px);
+    position: relative;
+    background: #151515;
+    left: 0px;
+    background-size: cover;
+    z-index: 5000;
+}
+
+.destaque::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    left: 0px;
+    background: linear-gradient(0deg, rgba(49,45,40,0.29735644257703087) 0%, rgba(49,45,40,0.3617822128851541) 100%);
+    opacity: 0.4;
+}
+
+.destaque .logo{
+    width: 37vw;
+    height: 15vw;
+    background-size: cover;
+    transform: scale(0.8);
+    position: relative;
+    top: 4vw;
+    z-index: 200;
+    left: 4vw;
+}
+
+.destaque::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(90deg, rgba(49,45,40,1) 0%, rgba(49,45,40,0.5942752100840336) 35%);
+    opacity: 0.8;
+}
+
+.destaque p{
+    position: relative;
+    z-index: 50;
+    top: 4vw;
+    width: 53vw;
+    left: 8vw;
+    height: 28%;
+    overflow: hidden;
+    font-size: 1vw;
+    color: #fff;
+}
+
+.destaque p::after{
+    content: '...';
+}
+
+button{
+    z-index: 100;
+    position: relative;
+    left: 8vw;
+    padding: 1vw;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    outline: none;
+    font-size: 1.1vw;
+    cursor: pointer;
+    border-radius: 0.3vw;
+    width: 19%;
+    transition: 1s;
+    top: 2vw;
+    margin-top: 3vw;
+}
+
+.destaque button{
+    z-index: 100;
+    position: relative;
+    left: 8vw;
+    padding: 1vw;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    outline: none;
+    font-size: 1.1vw;
+    cursor: pointer;
+    border-radius: 0.3vw;
+    width: 19%;
+    transition: 1s;
+    top: 2vw;
+    margin-top: 3vw;
+}
+
+.destaque button:hover{
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.destaque .watch_button{
+    background: #41b1be;
+}
+
+
+.destaque .watch_button:hover{
+    background: #4495a0;
+}
+
+.watch{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    transition: 1s;
+    height: 100%;
+    animation: watch_animate 0.5s ease-out;
+    opacity: 0;
+}
+
+.watch_full{
+    -webkit-transition: 0.7s fadeIn;
+    -moz-transition: 0.7s fadeIn;
+    -o-transition: 0.7s fadeIn;
+    opacity: 1;
+}
+
+@keyframes watch_animate {
+    from {transform: scale(0.9);}
+    to {transform: scale(1);}
+}
+
+
+.watch h1{
+    color: #fff;
+    padding: 50px;
+    position: relative;
+    z-index: 50;
+    width: 50%;
+}
+
+.watch .preview{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-size: cover;
+    left: 0%;
+    top: 0%;
+}
+
+.watch .close{
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    color: #fff;
+    z-index: 8000;
+    font-size: 42px;
+    cursor: pointer;
+}
+
+.close{
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    color: #fff;
+    z-index: 20000;
+    font-size: 42px;
+    cursor: pointer;
+}
+
+.watch .preview::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+}
+
+.scroll{
+    position: relative;
+    top: 1vw;
+    z-index: 100;
+    white-space: nowrap;
+    max-width: 99vw;
+    overflow: hidden;
+    padding: 4vw;
+    width: 99vw;
+    margin-top: -7vw;
+}
+
+.anime_img{
+    width: 3vw;
+    height: 3vw;
+    padding: 5vw 8vw;
+    background-size: cover;
+    margin-left: 0.5vw;
+    cursor: pointer;
+    transition: 1s;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    float: left;
+    white-space: nowrap;
+    top: 0vw;
+}
+
+.sublist{
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.anime_img .anime_hover{
+    position: absolute;
+    left: 2vw;
+    background: rgba(0,0,0,.40);
+    height: 3vw;
+    width: 3vw;
+    margin-top: -5vw;
+    padding: 5vw 8vw;
+    opacity: 0;
+    transition: all 0.1s;
+    white-space: nowrap;
+}
+
+.anime_img .anime_hover .anime_title{
+    font-size: 1.2vw;
+    float: left;
+    position: relative;
+    color: #fff;
+    left: -9vw;
+    bottom: -1vw;
+}
+
+
+.scroll h1{
+    font-size: 2vw;
+    color: #fff;
+    padding: 2vw;
+}
+
+.anime_hover i{
+    color: #fff;
+    position: absolute;
+    margin-top: -1vw;
+    font-size: 1.4vw;
+}
+
+.zoom{
+    transform: scale(1.7);
+    margin-left: 6vw !important;
+    margin-right: 6vw !important;
+    z-index: 10000 !important;
+}
+
+.zoom .anime_hover{
+    opacity: 1 !important;
+    transform: scale(1);
+    left: 0vw !important;
+}
+
+@-webkit-keyframes view_anime {
+    0%   { height: 0px; }
+    100% { height: 400px; }
+  }
+
+.view{
+    position: relative;
+    width: 102%;
+    background: #000;
+    height: 400px;
+    margin-top: -2vw;
+    -webkit-animation: view_anime 1s ; /* Safari 4+ */
+    -moz-animation:    view_anime 1s ; /* Fx 5+ */
+    -o-animation:      view_anime 1s ; /* Opera 12+ */
+    animation:         view_anime 1s; /* IE 10+, Fx 29+ */
+    overflow: hidden;
+}
+
+.view h1{
+    color: #fff;
+    padding: 20px;
+    font-size: 2vw;
+    position: relative;
+    z-index: 2000;
+}
+
+.view p{
+    color: #fff;
+    width: 800px;
+    font-size: 0.9vw;
+    position: relative;
+    left: 20px;
+    z-index: 1000;
+    height: 170px;
+}
+
+.view .background{
+    width: 60%;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.view .background::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(90deg, #000 0%, rgba(49,45,40,0.5018382352941176) 35%);
+}
+
+.view button{
+    left: 20px;
+    top: 0vw;
+    z-index: 1000;
+    background: #fff;
+    color: #000;
+}
+
+.watch_button:hover{
+    background: #4495a0 !important;
+    color: #fff !important;
+}
+
+.watch_button{
+    background: #41b1be !important;
+    color: #fff !important;
+}
+
+@media screen and (max-width: 520px){
+    h1{
+        font-size: 6vw !important;
+    }
+
+    .zoom{
+        transform: scale(1);
+        margin-left: 0vw !important;
+        margin-right: 0vw !important;
+    }
+
+    header{
+        padding: 2vw;
+    }
+
+    .anime_hover i{
+        color: #fff;
+        position: absolute;
+        margin-top: -4vw;
+        font-size: 7vw;
+    }    
+
+    .destaque{
+        height: calc(31vw + 380px);
+    }
+    .destaque p{
+        width: 70vw;
+        font-size: 4vw;
+    }
+
+    .anime_img .anime_hover .anime_title{
+        bottom: -14vw !important;
+        left: -42vw !important;
+    }
+
+    .destaque .logo{
+        width: 90vw;
+        height: 35vw;
+    }
+
+    .destaque button{
+        width: 60%;
+        height: 10vw;
+        font-size: 4vw;
+        left: 5%;
+        border-radius: 0.7vw;
+        top: 6vw;
+    }
+
+    .scroll{
+        top: 3vw;
+    }
+
+    .anime_img{
+        padding: 25vw 44vw;
+        margin-top: 7vw;
+    }
+
+    .anime_img .anime_hover{
+        padding: 25vw 44vw !important;
+        margin-top: -25vw;
+    }
+
+    .anime_img .anime_hover .anime_title{
+        font-size: 4vw;
+        bottom: 3vw;
+        left: 2vw;
+    }
+
+    .view{
+        height: 102%;
+        width: 100%;
+        top: 0%;
+        z-index: 100000;
+        position: fixed;
+        overflow-y: scroll;
+    }
+
+    .view p{
+        overflow-y: scroll;
+        height: 40vw;
+    }
+
+    .view h1{
+        font-size: 9vw;
+    }
+
+    .view p{
+        font-size: 4vw;
+        width: 90%;
+    }
+
+    .view button{
+        position: relative;
+        top: 40vw;
+        font-size: 4vw;
+        width: 55vw;
+        height: 10vw;
+        border-radius: 0.5vw;
+    }
+
+    .scroll h1{
+        font-size: 8vw;
+    }
+}
+
+.show{
+    opacity: 1 !important;
+}
